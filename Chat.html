@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Bot</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background-image: url('{{ url_for("static", filename="background.jpg") }}'); 
+            background-size: cover; 
+            background-position: center; 
+            margin: 0; 
+            padding: 20px; 
+            display: flex; 
+            justify-content: center; 
+            align-items: flex-start; 
+            height: 100vh; 
+            box-sizing: border-box;
+        }
+        .chat-container { 
+            width: 600px; /* Increased width for more space */
+            height: 80vh; /* Restrict height of the entire chat container */
+            padding: 20px; 
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ccc; 
+            border-radius: 8px; 
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .messages { 
+            padding: 10px; 
+            background-color: #f9f9f9; 
+            display: flex; 
+            flex-direction: column; 
+            word-wrap: break-word;
+            flex-grow: 1; /* Allow chat box to grow */
+            margin-bottom: 10px;
+            overflow-y: auto; /* Enable scrolling */
+            max-height: 50vh; /* Restrict the maximum height */
+        }
+        .message { 
+            padding: 10px; 
+            margin: 5px 0; 
+            border-radius: 8px; 
+        }
+        .user-message { background-color: #d1e7dd; text-align: right; }
+        .bot-message { background-color: #f8d7da; text-align: left; }
+        .system-message { background-color: #d9edf7; text-align: center; font-style: italic; }
+        input[type=text] { 
+            width: calc(100% - 22px); 
+            padding: 10px; 
+            border: 1px solid #ccc; 
+            box-sizing: border-box; 
+            border-radius: 8px;
+            margin-bottom: 10px; /* Space before buttons */
+        }
+        button { 
+            padding: 10px; 
+            margin-top: 10px; 
+            background-color: #4CAF50; 
+            color: white; 
+            border: none; 
+            cursor: pointer; 
+            border-radius: 8px;
+        }
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Center-align the buttons vertically */
+            width: 100%;
+        }
+        .button-group button {
+            width: 30%; /* Each button will take up 30% of the width */
+        }
+        .faq-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .faq-buttons button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 8px;
+            width: calc(50% - 5px);
+        }
+    </style>
+</head>
+<body>
+
+<div class="chat-container">
+    <h2>Chat with Bot</h2>
+    <div class="messages" id="messages">
+        <div class="message system-message" id="system-message">How can I help you today?</div>
+    </div>
+
+    <!-- Language Selection Dropdown -->
+    <select id="language-select" onchange="setLanguage(this.value)">
+        <option value="en" selected>English</option>
+        <option value="te">Telugu</option>
+        <option value="kn">Kannada</option>
+    </select>
+
+    <!-- FAQ Buttons (Initially Visible) -->
+    <div class="faq-buttons" id="faq-buttons">
+        <button onclick="sendFAQ('Where is college?')">Where is college?</button>
+        <button onclick="sendFAQ('How much is the fees?')">How much is the fees?</button>
+        <button onclick="sendFAQ('Is there any hostel?')">Is there any hostel?</button>
+        <button onclick="sendFAQ('List of courses offered')">List of courses offered</button>
+        <button onclick="sendFAQ('Contact')">Contact</button>
+    </div>
+
+    <!-- User Input -->
+    <input type="text" id="user_input" placeholder="Type your message...">
+
+    <!-- Controls -->
+    <div class="button-group">
+        <button onclick="startSpeechRecognition()">🎤 Speak</button>
+        <button onclick="stopCurrentSpeech()">Stop Speech</button>
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    <label>
+        <input type="checkbox" id="tts_toggle" onchange="toggleTTS()"> Enable Text-to-Speech
+    </label>
+</div>
+
+<script>
+    let timeout;
+    let ttsEnabled = false;
+    let currentUtterance = null;  // To store the current utterance for TTS
+    let selectedLanguage = 'en';  // Default language is English
+
+    // Predefined word translation dictionary for Kannada and Telugu
+    const translationDict = {
+        'kn': {
+            'colleges': 'ಕಾಲೇಜು',
+            'fees': 'ಶುಲ್ಕ',
+            'hostel': 'ಹೋಸ್ಟೆಲ್',
+            'courses': 'ಪಠ್ಯಕ್ರಮಗಳು',
+            'contact': 'ಸಂಪರ್ಕಿಸಿ',
+            'transport': 'ಸಾರಿಗೆ ',
+            'founder': 'ಸ್ಥಾಪಕ',
+            'research': 'ಸಂಶೋಧನೆ',
+            'sports': 'ಕ್ರೀಡೆ',
+            'holidays': 'ರಜೆ',
+            'scholorship': 'ವಿದ್ಯಾರ್ಥಿವೇತನ',
+            'principal': 'ಪ್ರಾಂಶುಪಾಲರು',
+            'library': 'ಗ್ರಂಥಾಲಯ',
+            'syllabus': 'ಸಿಲಬಸ್',
+            'documents': 'ದಾಖಲೆಗಳು'
+        },
+        'te': {
+            'colleges': 'కాలేజీలు',
+            'fees': 'ఫీజులు',
+            'hostel': 'హోస్టెల్',
+            'courses': 'కోర్సులు',
+            'contact': 'సంప్రదించండి',
+            'transport': 'ట్రాన్స్‌పోర్ట్',
+            'founder': 'స్థాపకులు',
+            'research': 'పరిశోధన',
+            'sports': 'క్రీడా',
+            'holidays': 'సెలవు',
+            'scholorship': 'స్కాలర్షిప్',
+            'principal': 'ప్రిన్సిపాల్',
+            'library': 'లైబ్రరీ',
+            'syllabus': 'సిలబస్'
+        }
+    };
+
+    // Function to set the language
+    function setLanguage(lang) {
+        selectedLanguage = lang;
+    }
+
+    // Function to send user input
+    function sendMessage() {
+        const user_input = document.getElementById('user_input').value.trim();
+        if (user_input === '') return;
+
+        appendMessage('You: ' + user_input, 'user-message');
+        document.getElementById('user_input').value = '';
+
+        // Translate input to English (if necessary)
+        const translatedInput = translateInput(user_input);
+
+        // Fetch response from intents.json
+        fetch('/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: 'user_input=' + encodeURIComponent(translatedInput) + '&lang=' + selectedLanguage
+        })
+        .then(response => response.json())
+        .then(data => {
+            appendMessage('Bot:<br>' + data.response.replace(/\n/g, '<br>'), 'bot-message');
+            if (ttsEnabled && selectedLanguage === 'en') {
+                stopCurrentSpeech();  // Stop current speech before starting new one
+                speak(data.response);  // Speak the new response
+            }
+
+            // Hide FAQ buttons after bot response
+            hideFAQButtons();
+        });
+
+        resetTimeout();
+    }
+
+    // Function to handle FAQ clicks
+    function sendFAQ(question) {
+        document.getElementById('user_input').value = question;
+        sendMessage();
+    }
+
+    // Append messages to chat box
+    function appendMessage(content, className) {
+        const messagesDiv = document.getElementById('messages');
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'message ' + className;
+        messageDiv.innerHTML = content;
+        messagesDiv.appendChild(messageDiv);
+        messagesDiv.scrollTop = messagesDiv.scrollHeight; // Auto-scroll to the bottom
+    }
+
+    // Translate user input based on predefined words (Kannada and Telugu to English)
+    function translateInput(input) {
+        let translatedInput = input;
+
+        // Search for Kannada or Telugu words in the predefined dictionaries and translate
+        for (const lang in translationDict) {
+            const dict = translationDict[lang];
+            for (const key in dict) {
+                if (input.toLowerCase().includes(dict[key])) {
+                    translatedInput = translatedInput.replace(new RegExp(dict[key], 'gi'), key);
+                }
+            }
+        }
+        return translatedInput;
+    }
+
+    // Speech recognition
+    function startSpeechRecognition() {
+        const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+        recognition.lang = 'en-US';
+
+        recognition.start();
+        recognition.onresult = (event) => {
+            const transcript = event.results[0][0].transcript;
+            document.getElementById('user_input').value = transcript;
+            sendMessage();
+        };
+
+        recognition.onerror = (event) => {
+            alert('Speech recognition error: ' + event.error);
+        };
+
+        resetTimeout();
+    }
+
+    // Text-to-speech toggle
+    function toggleTTS() {
+        ttsEnabled = document.getElementById('tts_toggle').checked;
+    }
+
+    // Stop the current speech if TTS is enabled
+    function stopCurrentSpeech() {
+        if (currentUtterance) {
+            window.speechSynthesis.cancel(); // Stop the ongoing speech
+            currentUtterance = null;
+        }
+    }
+
+    // Speak the new text
+    function speak(text) {
+        currentUtterance = new SpeechSynthesisUtterance(text.replace(/<[^>]+>/g, ''));
+        currentUtterance.lang = 'en-US';
+        window.speechSynthesis.speak(currentUtterance);
+    }
+
+    // Reset timeout for inactivity
+    function resetTimeout() {
+        clearTimeout(timeout);
+        timeout = setTimeout(showSystemMessage, 30000); // 30 seconds inactivity
+    }
+
+    function showSystemMessage() {
+        appendMessage('How can I help you today?', 'system-message');
+    }
+
+    // Hide FAQ buttons after the first bot response
+    function hideFAQButtons() {
+        const faqButtonsDiv = document.getElementById('faq-buttons');
+        faqButtonsDiv.style.display = 'none'; // Hide FAQ buttons after bot response
+    }
+
+    window.onload = function() {
+        resetTimeout();
+        document.getElementById('user_input').addEventListener('keypress', function(event) {
+            resetTimeout();
+            if (event.key === 'Enter') sendMessage();
+        });
+    };
+</script>
+
+</body>
+</html>
