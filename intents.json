@@ -1,0 +1,1362 @@
+{
+   "intents":[
+ {
+   "tag": "greeting",
+   "patterns": [
+      "Hi",
+      "How are you?",
+      "Hello",
+      "Good day",
+      "What's up",
+      "heyy",
+      "whatsup"
+   ],
+   "responses": [
+      "<b>Hello!",
+      "<b>Good to see you again!",
+      "<b>Hi there, how can I help?"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "goodbye",
+   "patterns": [
+      "see you",
+      "bye bye",
+      "See you later",
+      "Goodbye",
+      "Bye",
+      "Have a Good day",
+      "talk to you later"
+   ],
+   "responses": [
+      "<b>Sad to see you go :(",
+      "<b>Talk to you later",
+      "<b>Goodbye!",
+      "<b>Come back soon"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "creator",
+   "patterns": [
+      "what is the name of your developers",
+      "what is the name of your creators",
+      "who created you",
+      "your developers",
+      "your creators",
+      "who are your developers",
+      "who created you",
+      "who made you",
+      "who designed you",
+      "Who developed you"
+   ],
+   "responses": [
+      "Final year students of BITM\n<b>1. Pooja Kandari\n2. Samatha K\n3. Samreen Sultan L B\n4. Rakshitha S "
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "name",
+   "patterns": [
+      "name",
+      "do you have a name",
+      "what are you called",
+      "what is your name",
+      "what should I call you",
+      "what are you",
+      "who are you",
+      "what am i chatting to",
+      "who am i taking to"
+   ],
+   "responses": [
+      "I am a Chatbot.",
+      "I am your helper"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "purpose",
+   "patterns": [
+      "Why are you developed?",
+      "why were you created",
+      "why are you created",
+      "what do you do",
+      "what is your purpose",
+      "how can you help me",
+      "for what reason were you created"
+   ],
+   "responses": [
+      "I have been devloped to answer your doubts regarding BITM college. Feel free to ask away your doubts!"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "hours",
+   "patterns": [
+      "timing of college",
+      "what is college timing",
+      "working days",
+      "college hours",
+      "what are college timings",
+      "when is the college open",
+      "what about college timing",
+      "is college open on saturday",
+      "when should i come to college",
+      "what is my college time"
+   ],
+   "responses": [
+      "The College is open from <b>9:00 AM to 4:30 PM</b>, Monday to Saturday."
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "number",
+   "patterns": [
+      "contact",
+      "more info",
+      "contact info",
+      "how to contact college",
+      "college telephone number",
+      "contact number?",
+      "College phone no?",
+      "phone number",
+      "phone no"
+   ],
+   "responses": [
+      "You can contact at: <b>+91-8392-237150/152/153/167</b>. For more details, please visit <a target=\"_blank\" href=\"https://bitm.edu.in/contact-us/\">here</a>."
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "course",
+   "patterns": [
+      "list of courses",
+      "list of courses offered",
+      "what are the courses offered in the college?",
+      "courses?",
+      "streams",
+      "branches",
+      "courses offered in BITM",
+      "branches?",
+      "courses available at BITM?",
+      "branches available at your college?",
+      "what are branches in BITM?"
+   ],
+   "responses": [
+      "Our university offers\n<b>1. Computer Science and Engineering\n2. Artificial Intellingence and Machine Learning\n3. Electronics and Communication Engineering\n4. Electrical and Electronic Engineering\n5. Mechanical engineering\n6. Data Science\n7. Civil engineering \n8. MBA\n</b>.For more information about the courses please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/programs\">here</a>"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "fees",
+   "patterns": [
+      "information about fee",
+      "what is the fees",
+      "how much is the fees",
+      "fees for first year",
+      "fee structure",
+      "fees structure",
+      "tell me something about the fees",
+      "how much is the fees"
+   ],
+   "responses": [
+      "If the student is from Kcet, then fee per annum is - Fee fixed by Govt. of Karnataka + Rs. 10,610/- (University fee).\n If the student is from COMED-K , then Fee per annum is - Fee fixed by Govt. of Karnataka + Rs. 10,610/- (University fee)\n. For more details about the college fee, please visit <a target=\"_blank\" href=\"https://bitm.edu.in/fees-structure/\">here</a>.Hostel fee per annum for\nBitm Campus(hostel and mess) - Rs.75,000/-\nRR- Block(Hostel and mess) - Rs.89,000/-\nFor more details about the hostel fee, please visit <a target=\"_blank\" href=\"https://bitm.edu.in/hostel-fees/\">here</a>."
+   ],
+   "context_set": ""
+}, 
+ {
+   "tag": "location",
+   "patterns": [
+      "where is bitm located",
+      "where is the college located",
+      "college is located at",
+      "where is college located",
+      "college location",
+      "college address",
+      "how can I reach college",
+      "what is the address of college",
+      "area",
+      "address",
+      "location"
+   ],
+   "responses": [
+      "Ballari Institute of Technology and Management (BITM) is located in Ballari (formerly known as Bellary), Karnataka, India. The institute is situated on the outskirts of the city and provides various undergraduate and postgraduate programs in engineering, management, and other fields.\nFor more details pease visit <a target=\"_blank\" href=\"https://www.google.com/maps/place/Ballari+Institute+of+Technology+%26+Management/@15.1684649,76.8507751,17z/data=!3m1!4b1!4m6!3m5!1s0x3bb712e70b405543:0x31ac9483bd758def!8m2!3d15.1684649!4d76.8507751!16s%2Fg%2F11cm05p6v7?authuser=0&entry=ttu\"> here</a>"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "hostel",
+   "patterns": [
+      "hostel location",
+      "hostel facilities",
+      "Does college provide hostel",
+      "Where is hostel",
+      "do you have hostel",
+      "hostel capacity",
+      "what is the hostel fee",
+      "how to get in hostel",
+      "what is the hostel address",
+      "how far is hostel from college",
+      "where is the hostel",
+      "Hostel rules and regulations"
+   ],
+   "responses": [
+      "Separate hostels for Boys and Girls are located on the college campus under the name BGI Hostels. There are 3 blocks for boys namely <b>Tunga, Bhadra, and Krishna</b>. <b>Kaveri and Nethravathi</b> exclusively for Girls. The hostel is elegantly built with spacious rooms, Nearly 905 boys and 820 girls have opted for the hostel.\nFor hostel details visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/lifebitm/campus-facilities#hostel_sec\"> here</a>"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "event",
+   "patterns": [
+      "happenings in college",
+      "events organised",
+      "list of events",
+      "list of events organised in college",
+      "What events are conducted in college",
+      "Are there any events held at college",
+      "Events?",
+      "functions",
+      "what are the events",
+      "tell me about events",
+      "what about events"
+   ],
+   "responses": [
+      "BITM hosts a variety of events, including <b>technical talks, workshops, competitions, and cultural activities</b>. BITM also hosts events related to science, technology, and innovation, as well as community engagement through its NSS unit. For event details visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/happenings/events\"> here</a>"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "document",
+   "patterns": [
+      "document to bring",
+      "documents needed at the time of admission",
+      "documents needed during admission",
+      "documents required for admision",
+      "documents required at the time of admission",
+      "What document are required for admission",
+      "what documents do I need for admission",
+      "documents needed"
+   ],
+   "responses": [
+      "The candidate after getting allotment of seat through CET/COMED-K/Management he/she has to approach the Admission Section complete the admission formalities with the following:\n<b>1. Allotment letter\n2. Original SSLC/SSC/10th/PUC/12th Marks Card and Transfer Certificate\n3. Original Study and Conduct Certificate\n4. Original Caste Certificate / Income Certificate, if applicable\n5. Original Migration Certificate, if applicable\n6. Two sets of photo copies of all the above along with 8 passport size photos\n7. College Fees, as applicable.\n8. The candidate will be allotted a section, either in Chemistry Group or Physics Group and the same is notified on the Notice Board at the beginning of the semester.\n9. The sections allotted to the students have to be followed and no change of sections is allowed under any circumstances.</b>\nTo know more about documents required visit <a target=\"_blank\" href=\"https://bitm.edu.in/fees-structure/\"> here</a>"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "campus",
+   "patterns": [
+      "campus size",
+      "size of campus",
+      "building size",
+      "how is campus",
+      "How many floors does college have",
+      "floors in college",
+      "how tall is the college building",
+      "floors"
+   ],
+   "responses": [
+      "The campus, spread over <b>11 acres of greenery, with eco-friendly surroundings</b>, has facilities that are a class apart, combining aesthetics with modernity. The institute's USP is its excellent student-teacher rapport and a student centric learning to give shape to the students' overall outlook.\nTo know more details about campus visit <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=I17uvIErPFQ/\"> here</a>"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "syllabus",
+   "patterns": [
+      "Syllabus for IT",
+      "what is the Information Technology syllabus",
+      "syllabus",
+      "timetable",
+      "what is IT syllabus",
+      "What is next lecture"
+   ],
+   "responses": [
+      "Timetable and syllabus are provided directly to the students with their respective access credentials."
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "library",
+   "patterns": [
+      "is there any library",
+      "library facility",
+      "Books",
+      "do you have library",
+      "does the college have library facility",
+      "college library",
+      "where can i get books",
+      "book facility",
+      "Where is library",
+      "Library information",
+      "how many libraries"
+   ],
+   "responses": [
+      "The Ballari Institute of Technology and Management (BITM) library, also known as the <b>Knowledge Centre</b>, has a vast collection of resources, including books, e-books, print journals, and e-journals. The BITM Library can <b>accommodate approximately 500 members</b> for seating. The library houses over <b>100,417</b> volumes across <b>11,199</b> titles in areas like Engineering, Management, MCA, and Humanities. For more details visit <a target=\"blank\" href=\"https://bitm.edu.in/library/\">here</a>"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "infrastructure",
+   "patterns": [
+      "how is college infrastructure",
+      "infrastructure",
+      "college infrastructure",
+      "what is the infrastructure of college",
+      "infrastructure of college",
+      "is the college infrastructure good",
+      "how is the college insfrastructure rated"
+   ],
+   "responses": [
+      "Our University has Excellent Infrastructure. Campus is clean. Good IT Labs With Good Speed of Internet connection.Placement Cell is Equipped with:\n<b>1. State of the art central air-conditioned Auditorium with 560 Capacity.\n2. Air-Conditioned Interview Cabins & GD Rooms with Wi-Fi Facility.\n3. 1044 Computers on a Single LAN with 200 Mbps Internet Leased Line.\n4.Air-conditioned Seminar Halls & Waiting Halls.</b> For more details visit <a target=\"blank\" href=\"https://www.bitm.edu.in/department/computer-science-engineering/infrastructure\">here</a> "
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "canteen",
+   "patterns": [
+      "food facilities",
+      "canteen facilities",
+      "is there any canteen",
+      "Is there a cafetaria in college",
+      "Does college have canteen",
+      "where is cafetaria",
+      "canteen",
+      "Food",
+      "Cafetaria"
+   ],
+   "responses": [
+      "Our university has cafetaria with variety of food available. For more details, please visit <a target=\"blank\" href=\"https://www.bitm.edu.in/lifebitm/campus-facilities#cafe_sec\">here</a>"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "menu",
+   "patterns": [
+      "menu",
+      "food menu",
+      "food in canteen",
+      "Whats there on menu",
+      "what is available in college canteen",
+      "what foods can we get in college canteen",
+      "food variety",
+      "What is there to eat?"
+   ],
+   "responses": [
+      "We serve <b>Roti meals, Rice meals, Gobi, French fries, Momos, idli, vada, masala dosa, Paneer Dosa, Pizza, Gobi Rice, Paneer rice</b> and lots of other delicious food!"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "placement",
+   "patterns": [
+      "What is college placement",
+      "Which companies visit in college",
+      "What is average package",
+      "companies visit",
+      "package",
+      "About placement",
+      "placement",
+      "recruitment",
+      "companies"
+   ],
+   "responses": [
+      "Training & Placement Cell at BITM strives for every single opportunity, if not <b>create an opportunity to make students employable</b>.\n The first & basic motto at Training & Placement cell is to make students aware of the corporate behavior & what are the basic requirements that companies look for.\nThis is bridged through engaging  alumni & students who are already on campus placed.\nOnce students understand T&P culture slowly, they start engaging them in training on <b>Soft Skills, Aptitude & Technical</b>.To know more about placements visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/placement-overview\">here</a>"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "hod",
+   "patterns": [
+      "Who is HOD",
+      "Where is HOD",
+      "it hod",
+      "name of it hod"
+   ],
+   "responses": [
+      "All engineering departments have different Head of the Departments who are available on campus"
+   ],
+   "context_set": ""
+},
+ {
+   "tag":"cse hod",
+   "patterns": [
+      "Who is cse HOD",
+      "Where is cse HOD",
+      "cse hod",
+      "name of cse hod"
+   ],
+   "responses": [
+      "The HOD of CSE Department is <b>Dr R N Kulkarni</b>.For more details about CSE department's HOD visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/dr-r-n-kulkarni\">here</a>"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "aiml hod",
+   "patterns": [
+      "Who is aiml HOD",
+      "Where is aiml HOD",
+      "aiml hod",
+      "name of aiml hod"
+   ],
+   "responses": [
+      "The HOD of AIML Department is <b>Dr B M Vidyavati</b>. For more details about AIML department's HOD visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/b-m-vidyavathi\">here</a>"
+   ],
+   "context_set": ""
+},
+{
+   "tag": "ece hod",
+   "patterns": [
+      "hod of ece",
+      "Who is ece HOD",
+      "Where is ece HOD",
+      "ece hod",
+      "name of ece hod"
+   ],
+   "responses": [
+      "The HOD of ECE Department is <b>Dr K M Sadyojatha</b>. For more details about ECE department's HOD visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/km-sadyojatha\">here</a>"
+   ],
+   "context_set": ""
+},
+{
+   "tag": "eee hod",
+   "patterns": [
+      "hod of eee",
+      "Who is eee HOD",
+      "Where is eee HOD",
+      "eee hod",
+      "name of eee hod"
+   ],
+   "responses": [
+      "The HOD of EEE Department is <b>Dr Sharana Reddy</b>. For more details about EEE department's HOD visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/sharana-reddy\">here</a>"
+   ],
+   "context_set": ""
+},
+{
+   "tag": "mechanical hod",
+   "patterns": [
+      "hod of mechanical",
+      "Who is mechanical HOD",
+      "Where is mechanical HOD",
+      "mechanical hod",
+      "name of mechanical hod"
+   ],
+   "responses": [
+      "The HOD of Mechanical DEpartment is <b>Dr V Venkata Ramana</b>. For more details about Mechanical department's HOD visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/v-venkata-ramana\">here</a>"
+   ],
+   "context_set": ""
+},
+{
+   "tag": "civil hod",
+   "patterns": [
+      "hod of civil",
+      "Who is civil HOD",
+      "Where is civil HOD",
+      "civil hod",
+      "name of civil hod"
+   ],
+   "responses": [
+      "The HOD of Civil Department is <b>Dr D Manikanta</b>. For more details about civil department's HOD visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/d-manikanta\">here</a>"
+   ],
+   "context_set": ""
+},
+{
+   "tag": "mba hod",
+   "patterns": [
+      "hod of mba",
+      "Who is mba HOD",
+      "Where is mba HOD",
+      "mba hod",
+      "name of mba hod"
+   ],
+   "responses": [
+      "The HOD of MBA is <b>Dr Janet Jyothi Dsouza</b>. For more details about MBA department's HOD visist <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/janet-jyothi-dsouza\">here</a>"
+   ],
+   "context_set": ""
+},
+{
+   "tag": "data science hod",
+   "patterns": [
+      "hod of data science",
+      "Who is data science HOD",
+      "Where is data science HOD",
+      "data science hod",
+      "name of data science hod"
+   ],
+   "responses": [
+      "The HOD of Data Science is <b>Dr Aradhana D</b>. For more details about MBA department's HOD visist <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/aradhana-d\">here</a>"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "principal",
+   "patterns": [
+      "what is the name of principal",
+      "what is the principal name",
+      "principal name",
+      "Who is college principal",
+      "Where is principal's office",
+      "principal",
+      "name of principal"
+   ],
+   "responses": [
+      " The principal of Ballari Institute of Technology & Management (BITM) is <b>Dr. Yadavalli Basavaraj</b>. He is a Professor in the Department of Mechanical Engineering and serves as the Principal. He holds a PhD in Maintenance Engineering from VTU, has over <b>50 published papers</b>, and <b>10 patents</b>. For more details visit <a target=\"_blank\" href=\"<a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/yadavalli-basavaraj\">here</a>\">here</a>. "
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "sem",
+   "patterns": [
+      "exam dates",
+      "exam schedule",
+      "When is semester exam",
+      "Semester exam timetable",
+      "semester",
+      "exam",
+      "when is exam",
+      "exam timetable",
+      "exam dates",
+      "when is semester"
+   ],
+   "responses": [
+      "Here is the Academic Calendar  <a target=\"_blank\" href=\"https://bitm.edu.in/coe/\">website</a>"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "admission",
+   "patterns": [
+      "what is the process of admission",
+      "what is the admission process",
+      "How to take admission in your college",
+      "What is the process for admission",
+      "admission",
+      "admission process"
+   ],
+   "responses": [
+      "Admission procedure differs for students coming through K-CET, Management, COMED-K etc....For furthur details visit <a target=\"_blank\" href=\"https://bitm.edu.in/fees-structure/\">website</a>"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "scholarship",
+   "patterns": [
+      "scholarship",
+      "Is scholarship available",
+      "scholarship engineering",
+      "scholarship for AI/ML",
+      "available scholarships",
+      "list of scholarship",
+      "IT scholarship",
+      "mechanical scholarship",
+      "chemical scholarship",
+      "first year scholarship",
+      "second year scholarship"
+   ],
+   "responses": [
+      "Many government scholarships are supported by our university. To know more about diffrent types of scholarships, their application process and other details and updates visit <a target=\"_blank\" href=\"https://bitm.edu.in/scholarships/\">here</a>"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "facilities",
+   "patterns": [
+      "What facilities college provide",
+      "College facility",
+      "What are college facilities",
+      "facilities",
+      "facilities provided"
+   ],
+   "responses": [
+      "The Ballari Institute of Technology and Management (BITM) provides a range of academic facilities, including <b>well-equipped classrooms, state-of-the-art laboratories, Auditorium, library</b>.\nThe institute has <b>39 laboratories, 4 CAD centers, and 6 workshops</b> for practical training\nBITM has 60 modern lecture rooms with projectors, CCTV cameras, and Wi-Fi.\n For more details please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/lifebitm/academic-facilities\">here</a>"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "college intake",
+   "patterns": [
+      "max number of students",
+      "number of seats per branch",
+      "number of seats in each branch",
+      "maximum number of seats",
+      "maximum students intake",
+      "What is college intake",
+      "how many stundent are taken in each branch",
+      "seat allotment",
+      "seats"
+   ],
+   "responses": [
+      "For CSE,AIML, and ECE 180 per branch and seats may be differ for different departments."
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "uniform",
+   "patterns": [
+      "college dress code",
+      "college dresscode",
+      "what is the uniform",
+      "can we wear casuals",
+      "Does college have an uniform",
+      "Is there any uniform",
+      "uniform",
+      "what about uniform",
+      "do we have to wear uniform"
+   ],
+   "responses": [
+      "Uniform depends upon the branch you are studying in. If you are studying in CSE or AIML or EEE or EC there is no uniform. Whereas, if you are studying in Civil, ME or MBA there are separate uniforms for each of those departments."
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "committee",
+   "patterns": [
+      "what are the different committe in college",
+      "different committee in college",
+      "Are there any committee in college",
+      "Give me committee details",
+      "committee",
+      "how many committee are there in college"
+   ],
+   "responses": [
+      "There are various committees in this college like <b>administrative committe, Sports and cultural committe, NBA committe</b> and others.For more details visit <a target=\"_blank\" href=\"https://bitm.edu.in/cultural-committee/\">here</a>"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "random",
+   "patterns": [
+      "I love you",
+      "Will you marry me",
+      "Do you love me",
+      "Do you love me",
+      "Do you hate me",
+      "Are you in love with someone",
+      "Do you hate someone",
+      "Do you like someone",
+      "Are you cheating on me",
+      "Do you already have someone",
+      "Are you in a relationship",
+      "Are you single",
+      "Will you go out with me",
+      "Will you date me",
+      "Are you seeing someone",
+      "Are you in love with someone"
+   ],
+   "responses": [
+      "I am not programmed for this, please ask appropriate query"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "swear",
+   "patterns": [
+      "fuck",
+      "bitch",
+      "shut up",
+      "hell",
+      "stupid",
+      "idiot",
+      "dumb ass",
+      "asshole",
+      "fucker",
+      "shit",
+      "shithead",
+      "damn it"
+   ],
+   "responses": [
+      "Please mind your language",
+      "I'm sorry if I have not provided you the information you need, please try asking the question in a differnt way."
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "vacation",
+   "patterns": [
+      "holidays",
+      "when will semester starts",
+      "when will semester end",
+      "when is the holidays",
+      "list of holidays",
+      "Holiday in these year",
+      "holiday list",
+      "about vacations",
+      "about holidays",
+      "When is vacation",
+      "When is holidays",
+      "how long will be the vacation"
+   ],
+   "responses": [
+      "Academic calender is given to you by your class-coordinators after you join your respective classes so that You can come to know about the vacation."
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "sports",
+   "patterns": [
+      "sports and games",
+      "give sports details",
+      "sports infrastructure",
+      "sports facilities",
+      "information about sports",
+      "Sports activities",
+      "please provide sports and games information"
+   ],
+   "responses": [
+      "Our university encourages all-round development of students and hence provides sports facilities in the campus. For more details visit<a target=\"_blank\" href=\"https://www.bitm.edu.in/lifebitm/campus-facilities#sport_sec\">here</a>"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "salutaion",
+   "patterns": [
+      "okk",
+      "okie",
+      "nice work",
+      "well done",
+      "good job",
+      "thanks for the help",
+      "Thank You",
+      "its ok",
+      "Thanks",
+      "Good work",
+      "k",
+      "ok",
+      "okay"
+   ],
+   "responses": [
+      "<b>I am glad I helped you</b>",
+      "welcome, anything else i can assist you with?"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "task",
+   "patterns": [
+      "what can you do",
+      "what are the thing you can do",
+      "things you can do",
+      "what can u do for me",
+      "how u can help me",
+      "why i should use you"
+   ],
+   "responses": [
+      "I can answer to low-intermediate questions regarding college",
+      "You can ask me questions regarding college, and i will try to answer them"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "ragging",
+   "patterns": [
+      "ragging",
+      "is ragging practice active in college",
+      "does college have any antiragging facility",
+      "is there any ragging cases",
+      "antiragging facility",
+      "ragging juniors",
+      "ragging history",
+      "ragging incidents"
+   ],
+   "responses": [
+      "<b>We are Proud to tell you that our college provides ragging free environment</b>, and we have strict rules against ragging\nThere are several events conducted to create awareness among students about the bad effects of ragging.For more info visit <a target=\"_blank\" href=\"https://bitm.edu.in/anti-ragging-disciplinary-committee/\">here</a>"
+   ],
+   "context_set": ""
+},
+{
+   "tag": "explorika",
+   "patterns": [
+      "annual event of college",
+      "what is explorika",
+      "explorika event at college",
+      "annual function in college",
+      "annual fest"
+   ],
+   "responses": [
+      "The annual fest of Ballari Institute of Technology and Management (BITM) in Ballari, Karnataka, is called Explorica. This vibrant event is typically held in May or June and features a diverse array of cultural, technical, and management activities.The various cmpetitions include\n<b>1. Painting\n2. Photography\n3. Debate\n4. Model making\n5. Tug of war\n7. Quiz\n8. Gully cricket\n9. Coding challange\n10. Cultural performances</b>\n For more details, please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/lifebitm/cultural-activities\">here</a>"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "cse staff",
+   "patterns": [
+      "Who are the staff in CSE",
+      "Who works in CSE department",
+      "What are the names of staff working in CSE dept",
+      "Staff working in CSE",
+      "Who works in CSE dept",
+      "CSE department",
+      "Teaching staff in computer science dept",
+      "Staff in computer science department"
+   ],
+   "responses": [
+      [
+      "Some of the people working in CSE Department are ", 
+       "Dr. R N Kulkarni Professor and HOD 34 Years 11 Months\nDr. C.K. Sreenivas Professor 23 Years 06 Months"
+      ]
+   ],
+   "context_set": ""
+},
+{
+   "tag":"alumni",
+   "patterns":[
+      "alumni of BITM",
+      "college alumni",
+      "old students of college",
+      "Bitm alumni",
+      "alumni"
+   ],
+   "responses":[
+      "Ballari Institute of Technology & Management (BITM) boasts a vibrant alumni community of over 7,000 members, many of whom have made significant contributions across various fields.Some of our proud Alumni are\n<b>1. Sri Raghavendra Prasad HM</b>: An ISRO Scientist-SF from the 2001 Mechanical Engineering batch, he served as the project manager for Chandrayaan-3, playing a pivotal role in the mission's design and development.\n<b>2. Murali Krishna J</b> is a 2003 graduate of the Ballari Institute of Technology and Management (BITM). He currently serves as a Technology Consultant at DXC Technology, based in Bangalore. His professional journey and contributions have been recognized by the BITM Alumni Association, which highlights his role in the tech industry.\n <b>3.Sri Veeresha DR</b>: Also from the 2001 Mechanical Engineering batch, he holds the position of Scientist-SF at ISRO, contributing to India's space research initiatives.\n <b>4.Mr. Siddharth Injeti</b>: A 2011 Mechanical Engineering graduate, he has gained recognition as a writer for Netflix and other OTT platforms, shaping India's web series landscape.\n<b>5. Mr. Dinakar T</b>: From the 2022-23 batch, he cleared the Service Selection Board (SSB) exam and was appointed as a Lieutenant in the Indian Army, exemplifying dedication to national service.To know more about our Alumni, Please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/alumni\">here</a>"
+   ],
+   "context_set":""
+},
+{
+   "tag":"alumni meet",
+   "patterns":[
+      "alumni meet of BITM",
+      "college alumni meet event",
+      "old student meet in college",
+      "students left bitm"
+   ],
+   "responses":[
+      "BITM's Alumni Association actively fosters connections through events like <b>'punarmilana'</b>,  an annual gathering that alternates between Bangalore and Ballari. The association also honors exceptional alumni with the Distinguished Alumni Award, recognizing achievements in fields such as entrepreneurship, academia, and social development.To know more about Alumni meet of BITM, Please visit <a target=\"_blank\" href=\"https://alumni.bitm.edu.in\">here</a>"
+   ],
+   "context_set":""
+},
+ {
+   "tag": "management",
+   "patterns": [
+      "Who is dean",
+      "Where is deputy director",
+      "dean",
+      "how to contact management",
+      "management",
+      "management information?"
+   ],
+   "responses": [
+      "The Director and managing trustee of BITM is <b>Dr. Yashvanth Bhupal</b>. You can contact at Phone: 08392-237152,Mobile: +91 9900559312 For more details visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/about/leadership/message/dr-yashvanth-bhupal\">here</a>"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "research",
+   "patterns": [
+      "research",
+      "research and development",
+      "R&D",
+      "R&D cell in bitm",
+      "is there R&D cell in BITM"
+   ],
+   "responses": [
+      "Ballari Institute of Technology & Management R&D Centres involves in identifying new research areas, developing projects leading to publications in National/International Journals and conferences & publications of Patents.\nInstitution Established R&D department at the department level to promote Research & Innovation among the faculty & students.\nThe centers helps in developing co-operative and complementary research among various Departments to explore advanced technologies.\nFor more info visit <a target=\"_blank\" href=\"https://bitm.edu.in/about-rd/\">here</a>"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "CSE location",
+   "patterns": [
+      "Location of cse Dept",
+      "Where is cse Dept",
+      "Where can I find cse Dept inside campus",
+      "Where is cse dept located",
+      "cse dept in campus"
+   ],
+   "responses": [
+      "CSE Department is located in Millennium Block of the campus."
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "AIML location",
+   "patterns": [
+      "Location of AIML Dept",
+      "Where is AIML Dept",
+      "Where can I find AIML Dept inside campus",
+      "Where is aiml dept located",
+      "aiml dept in campus"
+   ],
+   "responses": [
+      "AIML Department is located at Admin Block 3rd floor of the campus."
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "Civil location",
+   "patterns": [
+      "Location of Civil Dept",
+      "Where is civil Deptartment",
+      "Where can I find civil Dept inside campus",
+      "Where is civil dept located",
+      "civil dept in campus"
+   ],
+   "responses": [
+      "Civil Department is located in Admin Block 2nd floor Block of the campus."
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "ECE location",
+   "patterns": [
+      "Location of ECE Dept",
+      "Where is ECE Dept",
+      "Where can I find ECE Dept inside campus",
+      "Where is ece dept located",
+      "ece dept in campus"
+   ],
+   "responses": [
+      "ECE Department is located in Millennium Block of the campus."
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "EEE location",
+   "patterns": [
+      "Location of EEE Dept",
+      "Where is EEE Dept",
+      "Where can I find EEE Dept inside campus",
+      "Where is eee dept located",
+      "eee dept in campus"
+   ],
+   "responses": [
+      "EEE Department is located in Electrical Block of the campus."
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "Mechanical location",
+   "patterns": [
+      "Location of mechanical Dept",
+      "Where is mechanical Dept",
+      "Where can I find mechanical Dept inside campus",
+      "Where is mechanical dept located",
+      "mechanical dept in campus"
+   ],
+   "responses": [
+      "Mechanical Department is located in Mechanical Block of the campus."
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "MBA location",
+   "patterns": [
+      "Location of mba Dept",
+      "Where is mba Dept",
+      "Where can I find mba Dept inside campus",
+      "Where is mba dept located",
+      "mba dept in campus"
+   ],
+   "responses": [
+      "MBA Department is located in Admin Block 1st floor of the campus."
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "founder",
+   "patterns": [
+      "Who is founder of BITM",
+      "who founded bitm",
+      "founder",
+      "founder of bitm",
+      "founder"
+   ],
+   "responses": [
+      " The Founder of BITM is <b>Late. Smt.Basavarajeswari</b>. For more detail, please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/about/leaders-talk/founder\">here</a>"
+   ],
+   "context_set": ""
+},
+ {
+   "tag": "transport",
+   "patterns": [
+      "is there transportation facility provided by college",
+      "is transportation available",
+      "are buses available",
+      "Are there buses for transportation",
+      "Does the college provide transportation",
+      "what is fees for transportation facility",
+      "How much does it cost to avail transportation from college",
+      "When will the buses arrive at stops?",
+      "bus timings",
+      "bus facility",
+      "Does BITM provide bus facility",
+      "are buses available in BITM"
+   ],
+   "responses": [
+      "BITM provides bus facility for students and staff members, covering every nook and corner of the city.\n The college owns a fleet of 16 buses equipped with safety features such as fire extinguishers, a first-aid box, and a speed governor.\n Opting for college bus transport ensures safe and convenient travel.\n For more info, visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/lifebitm/campus-facilities#trans_sec\">here</a>."
+   ],
+   "context_set": ""
+},
+{
+   "tag":"internships",
+   "patterns":[
+      "Are internships or placements provided",
+      "internships available at bitm",
+      "placements provided at bitm",
+      "placement are going in bitm",
+      "internships provided at bitm",
+      "companies recruiting at bitm"
+   ],
+   "responses":[
+      "Yes, BITM has a dedicated placement cell that helps students secure internships and placements with top companies"
+   ],
+   "context_set":""
+},
+{
+   "tag":"safety",
+   "patterns":[
+      "What measures are in place for student safety",
+      "student safety measures",
+      "safety measures taken at bitm",
+      "what are the level of safety at bitm",
+      "safety protocols at bitm",
+      "Are students safe at bitm"
+   ],
+   "responses":[
+      "BITM ensures a safe campus environment with <b>CCTV surveillance, security personnel, and strict anti-harassment policies</b>"
+   ],
+   "context_set":""
+},
+{
+   "tag":"companies",
+   "patterns":[
+      "Which companies visit BITM for placements",
+      "companies recruiting at bitm",
+      "which companies recruit students at bitm",
+      "top companies recruiting at bitm",
+      "company names which recruit at bitm"
+   ],
+   "responses":[
+      "Top recruiters include <b>Infosys, TCS, Wipro, Cognizant, Capgemini, Bosch</b>, and more. BITM has a strong placement record. For more details, please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/placements/our-recruiters\">here</a>"
+   ],
+   "context_set":""
+},
+{
+   "tag":"package",
+   "patterns":[
+      "What is the highest package offered during placements",
+      "highest package offered at bitm",
+      "highest salary package recruited at bitm",
+      "what is the highest salary package offered",
+      "highest salary package offered by companies at bitm"
+   ],
+   "responses":[
+      "The highest package varies each year, with the latest being approximately <b>40lpa in the year 2025<\b>. For more details, please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/placement-overview\">here</a>"
+   ],
+   "context_set":""
+},
+{
+   "tag":"training",
+   "patterns":[
+      "BITM provide placement training",
+      "placement training provided at bitm",
+      "is placement training provided at bitm",
+      "is the placement training provided at bitm good",
+      "traing provided for placements at bitm"
+   ],
+   "responses":[
+      "Yes, BITM offers placement training, including aptitude tests, group discussions, interview skills, and technical training."
+   ],
+   "context_set":""
+},
+{
+   "tag":"C K Sreenivas",
+   "patterns":[
+      "who is Dr C K Sreenivas",
+      "C K Sreenivas sir",
+      "Tell me about Sreenivas sir",
+      "C K Sreenivas sir in BITM"
+   ],
+   "responses":[
+      "<b>Dr. C.K. Sreenivas</b> is an Associate Professor in the Department of Computer Science & Engineering at Ballari Institute of Technology and Management (BITM), Karnataka. He earned his Ph.D. in Software Engineering from Visvesvaraya Technological University, Belagavi, and has been a <b>faculty member at BITM since 2003</b> . For more details, Please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/dr-ck-sreenivas\">here</a> "
+   ],
+   "context_set":""
+},
+{
+   "tag":"Dr. Muhibur Rahman T.R",
+   "patterns":[
+      "who is Dr Muhibur Rahman T R?",
+      "Dr. Muhibur Rahman T R",
+      "Tell me about Muhibur Rahman sir"
+   ],
+   "responses":[
+      "<b> Dr. T.R. Muhibur Rahman</b> is an Associate Professor in the Department of Computer Science & Engineering at Ballari Institute of Technology and Management (BITM), Karnataka. He has been a <b>faculty member at BITM since 2007</b>, bringing over <b>28 years of teaching experience</b> in engineering colleges and <b>12 years of research experience</b>. Please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/dr-muhibur-rahman-tr\">here</a>"
+   ],
+   "context_set":""
+},
+{
+   "tag":"Chidananda H",
+   "patterns":[
+      "who is Dr Chidananda H?",
+      "Dr. Chidananda H",
+      "Tell me about chidananda sir"
+   ],
+   "responses":[
+      " <b>Dr. H. Chidananda</b> is an Associate Professor in the Department of Computer Science & Engineering at Ballari Institute of Technology and Management (BITM), Karnataka. He is recognized for his research in <b>machine learning, pattern recognition, and human activity recognition</b>. Please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/dr-chidananda-h\">here</a>"
+   ],
+   "context_set":""
+},
+{
+   "tag":"Dr. Sudhakar Avareddy",
+   "patterns":[
+      "who is Dr Sudhakar Avareddy?",
+      "Dr. Sudhakar Avareddy",
+      "Tell me about Sudhakar Avareddy sir"
+   ],
+   "responses":[
+      " <b>Dr. Sudhakar Avareddy</b> is an Associate Professor in the Department of Computer Science & Engineering at Ballari Institute of Technology and Management (BITM), Karnataka. He has been a <b>faculty member at BITM since 2008</b>, contributing over <b>15 years of experience</b in academia. Please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/dr-sudhakar-avareddy\">here</a>"
+   ],
+   "context_set":""
+},
+{
+   "tag":"Dr. Sheetal Janthakal",
+   "patterns":[
+      "who is Sheetal?",
+      "Dr. Sheetal jantakal",
+      "Tell me about Sheetal mam"
+   ],
+   "responses":[
+      " <b>Dr. Sheetal Janthakal</b> is an Associate Professor in the Department of Computer Science & Engineering at Ballari Institute of Technology and Management (BITM), Karnataka. She completed her Ph.D. from Visvesvaraya Technological University (VTU), Belagavi, Karnataka. Her areas of expertise include <b>Artificial Intelligence and Image Processing</b>. Please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/dr-sheetal-janthakal\">here</a>"
+   ],
+   "context_set":""
+},
+{
+   "tag":"Ms. Pratibha Mishra",
+   "patterns":[
+      "who is prathiba Mishra?",
+      "Ms. pratibha Mishra",
+      "Tell me about pratibha mishra mam"
+   ],
+   "responses":[
+      " <b>Ms. Pratibha Mishra</b> is an Assistant Professor in the Department of Computer Science & Engineering at Ballari Institute of Technology and Management (BITM), Karnataka. She has been a faculty member at BITM since <b>2007</b>, bringing over <b>17 years of academic experience</b>. Please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/pratibha-mishra\">here</a>"
+   ],
+   "context_set":""
+},
+{
+   "tag":"Mr. Usman K",
+   "patterns":[
+      "who is usman sir?",
+      "Mr. Usman sir",
+      "Tell me about Mr. Usman"
+   ],
+   "responses":[
+      " <b>Mr. Usman K</b> is an Assistant Professor in the Department of Computer Science & Engineering at Ballari Institute of Technology and Management (BITM), Karnataka. He has been a faculty member at BITM since <b>2008</b>, bringing over <b>17 years of academic experience</b>. Please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/usman-k\">here</a>"
+   ],
+   "context_set":""
+},
+{
+   "tag":"Mr. Virupaksha Gouda R",
+   "patterns":[
+      "who is virupaksha gouda?",
+      "Mr. Virupaksha gouda",
+      "Tell me about virupaksha gouda"
+   ],
+   "responses":[
+      " <b>Mr. Virupaksha Gouda R</b> is an Assistant Professor in the Department of Computer Science & Engineering at Ballari Institute of Technology and Management (BITM), Karnataka. He has been a faculty member at BITM since 2008, bringing over <b>16 years of academic experience</b>. Please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/virupaksha-gouda-r\">here</a>"
+   ],
+   "context_set":""
+},
+{
+   "tag":"Mr. T.M. Hayath",
+   "patterns":[
+      "who is hayath?",
+      "Mr. T M Hayath",
+      "Tell me about hayath sir"
+   ],
+   "responses":[
+      " <b>Mr. T.M. Hayath</b> is an Assistant Professor in the Department of Computer Science & Engineering at Ballari Institute of Technology and Management (BITM), Karnataka. With over <b>16 years of teaching experience</b>, he specializes in delivering in-depth knowledge and fostering student growth in engineering education. Please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/tm-hayath\">here</a>"
+   ],
+   "context_set":""
+},
+{
+   "tag":"Mr. Dadapeer",
+   "patterns":[
+      "who is dadapeer?",
+      "Mr. Dadapeer",
+      "Tell me about Dadapeer"
+   ],
+   "responses":[
+      " <b>Mr. Dadapeer</b> is an Assistant Professor in the Department of Computer Science & Engineering at Ballari Institute of Technology and Management (BITM), Karnataka. With over <b>15 years of teaching experience</b>, he specializes in areas such as Machine Learning, Web Applications, Databases, Python, and Software Engineering. He is <b>KSET certified</b> and is currently pursuing a Ph.D. in Computational Intelligence Techniques. Please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/dadapeer\">here</a>"
+   ],
+   "context_set":""
+},
+{
+   "tag":"Mr. Md. Shafiulla",
+   "patterns":[
+      "who is shafiulla?",
+      "Mr. Md. Shafiulla",
+      "Tell me about Shafiulla sir"
+   ],
+   "responses":[
+      " <b>Mr. Md. Shafiulla</b> is an Assistant Professor in the Department of Computer Science & Engineering at Ballari Institute of Technology & Management (BITM), located in Ballari, Karnataka, India. He is a <b>Wipro TalentNext certified</b> faculty member and has qualified the <b>Karnataka State Eligibility Test (KSET)</b>. Please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/md-shafiulla\">here</a>"
+   ],
+   "context_set":""
+},
+{
+   "tag":"Ms. Shwethashree A",
+   "patterns":[
+      "who is shwetha mam?",
+      "Ms. Shwethashree A",
+      "Tell me about Shwethashree mam"
+   ],
+   "responses":[
+      " <b>Ms. Shwethashree A</b> is an Assistant Professor in the Department of Computer Science & Engineering at Ballari Institute of Technology & Management (BITM), Ballari, Karnataka. She has been a part of the institution since <b>2013</b> and brings over <b>17 years of teaching experience</b> to her role. Currently, she is pursuing a Ph.D. in the field of Software Engineering. Please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/shwethashree-a\">here</a>"
+   ],
+   "context_set":""
+},
+{
+   "tag":"Mr. Hari Krishna H",
+   "patterns":[
+      "who is hari krishna?",
+      "Mr. Hari krishna",
+      "Tell me about hari krishna sir"
+   ],
+   "responses":[
+      " <b>Mr. Hari Krishna H</b> is an Assistant Professor in the Department of Computer Science & Engineering at Ballari Institute of Technology & Management (BITM), Ballari, Karnataka. He is part of a dedicated faculty team committed to delivering quality education and fostering innovation in the field of computer science. Please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/hari-krishna-h\">here</a>"
+   ],
+   "context_set":""
+},
+{
+   "tag":"Mr. Srisailanath",
+   "patterns":[
+      "who is srisailanath?",
+      "Mr. srisailanath",
+      "Tell me about srisailanath sir"
+   ],
+   "responses":[
+      " <b>Mr. Srisailanath</b> is an Assistant Professor in the Department of Computer Science & Engineering at Ballari Institute of Technology & Management (BITM), Ballari, Karnataka. He holds a Bachelor of Engineering (B.E.) in Information Science & Engineering and a Master of Technology (M.Tech) in Computer Network Engineering. With <b>14 years of teaching experience</b>, he has been contributing to BITM since 2016. Please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/srisailanath\">here</a>"
+   ],
+   "context_set":""
+},
+{
+   "tag":"Ms. Jagadevi Puranikmath",
+   "patterns":[
+      "who is jagdevi mam?",
+      "Ms. Jagdevi puranikmath",
+      "Tell me about jagadevi puranikmath mam"
+   ],
+   "responses":[
+      " <b>Mrs. Jagadevi Puranikmath</b> is an Assistant Professor in the Computer Science & Engineering department at BITM, Ballari. She holds an M.Tech, is a <b>Sun Certified Java Programmer</b>, and is currently pursuing a Ph.D. in AI/ML from VTU. She has over 7 years of teaching experience and has published research in areas like <b>AI, IoT, and machine learning</b>. Please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/jagadevi-puranikmath\">here</a>"
+   ],
+   "context_set":""
+},
+{
+   "tag":"Mr. Chandrasekhar V",
+   "patterns":[
+      "who is chandrasekhar sir?",
+      "Mr. Chandrasekhar V",
+      "Tell me about Mr. Chandrasekhar"
+   ],
+   "responses":[
+      " <b>Mr. Chandrasekhar V</b> is an Assistant Professor in the Department of Computer Science & Engineering at Ballari Institute of Technology & Management (BITM), Ballari. He holds an M.Tech. in Computer Science & Engineering from Visvesvaraya Technological University (VTU), Belagavi, and has over <b>27 years of combined teaching and administrative experience</b>. His areas of expertise include Computer Science and Software Engineering. Please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/chandrasekhar-v\">here</a>"
+   ],
+   "context_set":""
+},
+{
+   "tag":"Mr. Sreenivasa M",
+   "patterns":[
+      "who is sreenivasa M sir?",
+      "Mr. Sreenivasa M",
+      "Tell me about Mr. Sreenivasa M"
+   ],
+   "responses":[
+      " <b>Mr. Sreenivasa M</b> is an Assistant Professor in the Department of Computer Science & Engineering at Ballari Institute of Technology & Management (BITM), Ballari. He holds an M.Tech. from Visvesvaraya Technological University (VTU), Belagavi, and has over <b>20 years of combined experience in teaching and leadership roles</b>. His areas of expertise include <b>Computer Science, Software Engineering, Data Structures, Machine Learning, Java Programming, and Robotic Process Automation</b>. Please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/sreenivasa-m\">here</a>"
+   ],
+   "context_set":""
+},
+{
+   "tag":"Ms. Steffi Nivedita S",
+   "patterns":[
+      "who is steffi nivedita mam?",
+      "Ms. Steffi Nivedita S",
+      "Tell me about Ms. Steffi nivedita"
+   ],
+   "responses":[
+      " <b>Ms. Steffi Nivedita S</b> is an Assistant Professor in the Department of Computer Science & Engineering at Ballari Institute of Technology & Management (BITM), Ballari. She holds a B.E. and an M.Tech in Computer Science & Engineering from Visvesvaraya Technological University (VTU), Belagavi. With experience in both teaching and research, she contributes to the academic and professional development of students in the field of computer science. Please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/steffi-nivedita-s\">here</a>"
+   ],
+   "context_set":""
+},
+{
+   "tag":"Mr. Narasimharaju Paka",
+   "patterns":[
+      "who is narasimharaju sir?",
+      "Mr. Narasimharaju Paka",
+      "Tell me about Mr. narasimharaju"
+   ],
+   "responses":[
+      " <b>Mr. Narasimharaju Paka</b> is an experienced faculty member at Ballari Institute of Technology & Management (BITM), Ballari, Karnataka. He serves in the Department of Computer Science & Engineering, contributing to the academic and research endeavors of the institution. Please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/narasimharaju-paka\">here</a>"
+   ],
+   "context_set":""
+},
+{
+   "tag":"Ms. Madhuri A",
+   "patterns":[
+      "who is madhuri mam?",
+      "Ms. Madhuri A",
+      "Tell me about Ms. Madhuri"
+   ],
+   "responses":[
+      " <b>Ms. Madhuri A</b> is an Assistant Professor in the Department of Computer Science & Engineering at Ballari Institute of Technology & Management (BITM), Ballari, Karnataka. She is an experienced faculty member contributing to the academic and research endeavors of the institution. Please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/madhuri-a\">here</a>"
+   ],
+   "context_set":""
+},
+{
+   "tag":"Ms. Manjula K",
+   "patterns":[
+      "who is manjula mam?",
+      "Ms. Manjula K",
+      "Tell me about Ms. Manjula"
+   ],
+   "responses":[
+      " <b>Ms. Manjula K</b> is an Assistant Professor in the Department of Computer Science & Engineering. She holds an M.Tech in Computer Science & Engineering from Visvesvaraya Technological University (VTU), Belagavi, and contributes to the academic and research endeavors of the department. Please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/manjula-k\">here</a>"
+   ],
+   "context_set":""
+},
+{
+   "tag":"Ms. Varada Alekhya",
+   "patterns":[
+      "who is alekhya mam?",
+      "Ms. Varada Alekhya",
+      "Tell me about Ms. Alekhya"
+   ],
+   "responses":[
+      "<b>Ms. Varada Alekhya</b> is an Assistant Professor in the Department of Computer Science & Engineering at Ballari Institute of Technology & Management (BITM), Ballari. She holds an M.Tech in Computer Science & Engineering from Jawaharlal Nehru Technological University Anantapur (JNTUA) and joined BITM in 2023. Please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/varada-alekhya\">here</a>"
+   ],
+   "context_set":""
+},
+{
+   "tag":"Ms. Sameena Yasmeen",
+   "patterns":[
+      "who is sameena yasmin mam?",
+      "Ms. Sameena Yasmeen",
+      "Tell me about Ms. sameena yasmeen"
+   ],
+   "responses":[
+      "<b>Ms. Sameena Yasmeen</b> is a faculty member in the Department of Computer Science & Engineering at Ballari Institute of Technology & Management (BITM), Ballari. She has been associated with the institution for nearly two years, serving as a supervisor and handling various laboratory sessions, including C++, Mobile Application Development (MAD), Design and Analysis of Algorithms (DAA), and R programming. Please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/sameena-yasmeen\">here</a>"
+   ],
+   "context_set":""
+},
+{
+   "tag":"Mr. Kiran Mudaraddi A",
+   "patterns":[
+      "who is kiran muddaraddi sir?",
+      "Mr. Kiran Mudaraddi A",
+      "Tell me about Mr. kiran muddaraddi sir"
+   ],
+   "responses":[
+      "<b>Mr. Kiran Mudaraddi</b> is an Assistant Professor in the Department of Computer Science & Engineering at Ballari Institute of Technology & Management (BITM), Ballari. He holds an M.Tech from Visvesvaraya Technological University (VTU), Belagavi, and has been serving at BITM since 2014. With over 16 years of experience in teaching and academic leadership, his areas of expertise include Software Engineering, Algorithms, Computer Vision, and Artificial Intelligence & Machine Learning. Please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/kiran-mudaraddi-a\">here</a>"
+   ],
+   "context_set":""
+},
+{
+   "tag":"paniram prasad sir",
+   "patterns":[
+      "who is Dr P Paniram prasad?",
+      "paniram",
+      "Tell me about paniram prasad"
+   ],
+   "responses":[
+      " Dr. P. Paniram Prasad is a Professor and Dean at BITM Ballari, specializing in software engineering and holding multiple research patents. Please visit <a target=\"_blank\" href=\"https://www.bitm.edu.in/academics/faculty/dr-p-paniram-prasad\">here</a>"
+   ],
+   "context_set":""
+}
+]
+}

@@ -1,0 +1,8 @@
+Flask
+Flask-MySQLdb
+nltk
+numpy
+scikit-learn
+pyspellchecker
+flask-cors
+googletrans==4.0.0rc1
